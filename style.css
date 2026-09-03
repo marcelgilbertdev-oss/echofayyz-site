@@ -1,0 +1,107 @@
+/* ECHOFAYYZ - artist site.
+   Same architecture as zerofayyz.com; palette shifted from studio cyan to
+   violet -> magenta so the two read as family without being the same brand. */
+:root{
+  --violet:#a855f7; --violet-dim:#8b5cf6; --magenta:#f472b6; --magenta-dim:#ec4899;
+  --bg:#080a12; --panel:#12101f; --panel-2:#0e0c1a;
+  --line:#241e3a; --line-soft:#1a1630;
+  --text:#f3eefa; --muted:#a79cc0;
+  --radius:14px; --maxw:980px;
+  --grad:linear-gradient(100deg,var(--violet) 0%,var(--magenta) 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(60rem 32rem at 12% -8%, rgba(168,85,247,.18), transparent 60%),
+    radial-gradient(52rem 30rem at 92% 4%, rgba(244,114,182,.13), transparent 62%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+a{color:var(--magenta)}
+
+header{padding:26px 0 0}
+.brand-logo{width:190px; height:auto; display:block}
+
+h1{font-size:clamp(34px,6vw,58px); line-height:1.06; letter-spacing:-.02em; margin:0 0 14px}
+h2{font-size:clamp(24px,3.4vw,32px); letter-spacing:-.015em; margin:0 0 8px}
+.g{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent}
+.sub{font-size:clamp(17px,2.2vw,20px); color:var(--muted); max-width:58ch; margin:0 0 22px}
+.eyebrow{display:inline-block; font-size:12px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--magenta); background:rgba(244,114,182,.10);
+  border:1px solid rgba(244,114,182,.25); border-radius:999px; padding:5px 13px; margin-bottom:16px}
+
+/* Masthead: copy only, on plain ground. Artwork gets its own strip below so
+   neither fights the other for legibility. (Same rule as the studio site.) */
+.masthead{padding:34px 0 40px}
+
+.cta-row{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.btn{display:inline-block; background:var(--grad); color:#0a0714; font-weight:800;
+  text-decoration:none; padding:13px 22px; border-radius:11px}
+.btn-ghost{display:inline-block; text-decoration:none; padding:13px 22px; border-radius:11px;
+  border:1px solid var(--line); color:var(--text); font-weight:600}
+.btn-ghost:hover{border-color:var(--violet)}
+
+.nav{display:flex; flex-wrap:wrap; gap:18px; margin-top:18px}
+.nav a{color:var(--muted); text-decoration:none; font-size:14px; letter-spacing:.02em}
+.nav a:hover{color:var(--text)}
+
+.hero-strip{margin:0 0 10px; padding:0}
+.hero-strip img{width:100%; height:auto; display:block; border-radius:var(--radius);
+  border:1px solid var(--line)}
+.hero-strip figcaption{color:var(--muted); font-size:13.5px; margin-top:12px; max-width:74ch}
+
+section{padding:46px 0 0}
+.lede{color:var(--muted); max-width:66ch; margin:0 0 26px}
+
+/* Releases */
+.releases{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:22px; margin-top:28px}
+.release{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  overflow:hidden; position:relative; display:flex; flex-direction:column}
+.release::before{content:""; position:absolute; inset:0 0 auto 0; height:2px; background:var(--grad); opacity:.8; z-index:1}
+.release img{width:100%; height:auto; display:block}
+.release .body{padding:20px 22px 22px}
+.release h3{margin:0 0 4px; font-size:20px; letter-spacing:-.01em}
+.release .meta{color:var(--magenta); font-size:12px; letter-spacing:.11em;
+  text-transform:uppercase; margin:0 0 12px}
+.release p{color:#d6cfe6; margin:0 0 16px; font-size:14.5px}
+.release .links{display:flex; flex-wrap:wrap; gap:9px}
+.release .links a{font-size:13.5px; text-decoration:none; color:var(--text);
+  border:1px solid var(--line); border-radius:999px; padding:6px 14px}
+.release .links a:hover{border-color:var(--magenta)}
+
+/* Video embeds */
+.videos{display:grid; gap:24px; margin-top:26px}
+.vid{margin:0; padding:0}
+.vid .frame{position:relative; padding-top:56.25%; border-radius:var(--radius);
+  overflow:hidden; border:1px solid var(--line); background:var(--panel-2)}
+.vid iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.vid figcaption{color:var(--muted); font-size:13.5px; margin-top:11px}
+
+/* Follow */
+.follow{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:24px}
+.follow a{display:block; background:var(--panel-2); border:1px solid var(--line);
+  border-radius:var(--radius); padding:20px 22px; text-decoration:none; transition:border-color .15s}
+.follow a:hover{border-color:var(--violet)}
+.follow b{display:block; color:var(--text); font-size:16px; margin-bottom:5px}
+.follow span{color:var(--muted); font-size:14px}
+
+/* Disclosure */
+.disclosure{background:var(--panel); border:1px solid rgba(168,85,247,.3);
+  border-radius:var(--radius); padding:26px 28px; margin-top:26px}
+.disclosure h3{margin:0 0 10px; font-size:17px; color:var(--violet)}
+.disclosure p{margin:0 0 10px; color:#d6cfe6; max-width:68ch; font-size:15px}
+.disclosure p:last-child{margin-bottom:0}
+
+footer{padding:44px 0 60px; color:var(--muted); font-size:13px;
+  border-top:1px solid var(--line-soft); margin-top:52px}
+footer a{color:var(--muted)}
+.legal{margin-top:14px; font-size:12.5px; color:#7a6f94; max-width:72ch}
+
+@media (max-width:720px){
+  .masthead{padding:22px 0 30px}
+  .brand-logo{width:150px}
+}
