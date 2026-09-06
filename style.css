@@ -118,3 +118,8 @@ footer a{color:var(--muted)}
   .masthead-art{justify-self:start; max-width:360px}
   .masthead-art img{aspect-ratio:16/10; object-position:12% center}
 }
+
+/* Header banner (6 Sep 2026): the logo as a full-width band instead of a small square. */
+.brand-banner{display:block; width:100%; height:auto; border-radius:var(--radius); border:1px solid var(--line);
+  box-shadow:0 24px 80px rgba(160,60,255,.16)}
+@media (max-width:720px){ .brand-banner{border-radius:12px} }
