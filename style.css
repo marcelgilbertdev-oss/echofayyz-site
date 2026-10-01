@@ -123,7 +123,7 @@ h2{font-size:clamp(26px,3.6vw,36px); letter-spacing:-.015em; margin:0}
 .shorts{display:grid; grid-auto-flow:column; grid-auto-columns:42%; gap:12px; overflow-x:auto; padding-bottom:8px;
   scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch}
 @media (min-width:700px){ .shorts{grid-auto-columns:23%} }
-@media (min-width:1000px){ .shorts{grid-auto-flow:row; grid-template-columns:repeat(6,minmax(0,1fr)); overflow:visible} }
+@media (min-width:1000px){ .shorts{grid-auto-flow:row; grid-template-columns:repeat(7,minmax(0,1fr)); overflow:visible} }
 .shorts a{scroll-snap-align:start; position:relative; display:block; border-radius:var(--radius); overflow:hidden;
   border:1px solid var(--line); text-decoration:none; color:var(--text)}
 .shorts img{width:100%; aspect-ratio:9/16; object-fit:cover; transition:transform .25s ease}
