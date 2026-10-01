@@ -158,3 +158,19 @@ footer a{color:var(--muted)}
 .soon-card .links{margin-top:0}
 .avail strong{color:var(--text)} .avail span{display:block; margin-top:6px; color:var(--magenta)}
 .hero-note{margin:16px 0 0; color:var(--muted); font-size:14.5px} .hero-note a{color:var(--text)}
+
+/* YouTube-first (1 Oct 2026): Subscribe is the main button; Videos sit above Music */
+.btn-yt{display:inline-flex; align-items:center; gap:10px}
+.yt-ico{width:24px; height:17px; flex:none}
+.yt-ico .yt-tri{fill:#f3eefa}
+.btn-sm .yt-ico{width:19px; height:14px}
+.btn-sm.btn-yt{gap:8px}
+.cta-sub{margin:12px 0 0; color:var(--soft); font-size:14.5px}
+.head-actions{display:flex; align-items:center; flex-wrap:wrap; gap:16px}
+.sub-row{display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:34px 0 14px}
+.sub-row .sub-h{margin:0}
+.follow a.is-main{border-color:rgba(244,114,182,.55); background:linear-gradient(135deg, rgba(168,85,247,.16), rgba(244,114,182,.10)), var(--panel-2)}
+.follow a.is-main b{display:flex; align-items:center; gap:8px}
+.follow a.is-main .yt-ico{color:var(--magenta); width:22px; height:16px}
+.follow a.is-main .yt-ico .yt-tri{fill:#0a0714}
+.follow a.is-main span{color:var(--soft)}
