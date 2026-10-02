@@ -8,6 +8,10 @@
       el.textContent = el.getAttribute(out ? 'data-out' : 'data-pre').replace(/&mdash;/g, '\u2014');
     });
   }
+  // 1b) Links that only appear from a set time (e.g. a lyric video that goes public later), set in UTC in data-after.
+  document.querySelectorAll('.js-after').forEach(function (el) {
+    if (new Date() >= new Date(el.getAttribute('data-after'))) el.hidden = false;
+  });
   // 2) Music filter chips (All / Worship / EDM).
   var chips = document.querySelectorAll('.chip');
   chips.forEach(function (chip) {
